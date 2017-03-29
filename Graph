@@ -1,0 +1,17 @@
+import numpy as np
+import matplotlib.pyplot as plt
+
+class graph:
+
+	def __init__(self, function=lambda x: x, x_range=np.linspace(0,5)):
+		self.function = function
+		self.x_range= x_range
+
+	def plot(self):
+		y_range=[]
+		for i in self.x_range:
+			y_range.append(self.function(i))
+
+		plt.plot(self.x_range, y_range)
+		plt.show()
+
